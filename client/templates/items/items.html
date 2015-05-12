@@ -1,0 +1,17 @@
+<template name="items">
+    <div class="page-header">
+      <h1>Items</h1>
+      <a href="/items/add" class="btn btn-primary">Add Custom Item</a>
+      <a data-action="addItem" href="#" class="btn btn-primary">Add Fake Data Item</a>
+    </div>
+
+    <ul class="list-group">
+      {{#each items}}
+        <li class="list-group-item"><a href="/items/{{_id}}">{{ name }}</a>
+          <span class="label label-default"> rating: {{ rating }}</span>
+          <a href="/items/{{_id}}/edit"><i class="fa fa-pencil"></i></a>
+          <a href="#" data-action="deleteItem"><i class="fa fa-trash"></i></a>
+        </li>
+      {{/each}}
+    </ul>
+</template>
