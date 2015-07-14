@@ -1,23 +1,15 @@
-# Di-Base
+# Di-Base settings branch
 
-A starting point for simple Differential Meteor projects with best in class examples for functionality.
+Showcasing the use of settings.json files for production, staging, and development
 
-### Includes
- - User Accounts
- - Template level subscriptions
- - An example of CRUD operations
- - Minimal file structure
- - Routing
+#### Files Added
+ - package.json - This file sets the name of the app for npm and writes a script to link your settings files to those set in modulus
+ - settings.json - A JSON file with all the staging / dev keys
+ - settings.prod.json - A JSON file with all the production keys
 
-### TODOs branches (with add-ons)
- - settings
- - user-roles - break users into roles including seed users
- - models - Collection Models using astronomy
- - email - adding ability to send emails
- - user-profile - Add in a User Profile page for editing
- - external-api - Example of using an external API (like contentful)
- - image-upload - image upload to S3 and storing in db
- - csv - csv import/export
- - pdf - pdf export
- - ios - best in class ios app setup and documentation (from meteor to appstore)
- - pro - a branch to rule them all (includes all from above)
+#### Running app locally
+`npm start`
+
+#### Deploying
+ - For staging - `npm run staging`
+ - For production - `npm run production`
