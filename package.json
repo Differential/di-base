@@ -1,0 +1,8 @@
+{
+  "name": "di-base",
+  "scripts": {
+    "start": "meteor --settings settings.json",
+    "staging": "modulus env set METEOR_SETTINGS \"$(cat settings.json)\" -p 'di-base-staging' && modulus deploy -f -p 'di-base-staging'",
+    "production-deploy": "modulus env set METEOR_SETTINGS \"$(cat settings.prod.json)\" -p 'di-base-production' && modulus deploy -f -p 'di-base-production'"
+  }
+}

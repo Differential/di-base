@@ -1,0 +1,20 @@
+{
+  "aws": {
+    "key": "<INSERT KEY>",
+    "secret": "<INSERT KEY>",
+    "bucket": "<INSERT BUCKET NAME>",
+    "endpoint": "<INSERT HTTP ENDPOINT e.g http://di-base.amazonaws.com>"
+  },
+  "Stripe" : {
+    "secretKey" : "<INSERT KEY>"
+  },
+  "public": {
+    "Stripe" : {
+      "publicKey" : "<INSERT PUBLIC KEY>"
+    },
+    "astronomer": {
+      "appId": "<INSERT KEY>",
+      "appSecret": "<INSERT KEY>"
+    }
+  }
+}
