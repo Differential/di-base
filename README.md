@@ -9,8 +9,10 @@ A starting point for simple Differential Meteor projects with best in class exam
  - Minimal file structure
  - Routing
 
+### Available branches
+ - settings (https://github.com/cfly15/di-base/tree/settings) - show how to use settings.json files and deploy with an npm script
+
 ### TODOs branches (with add-ons)
- - settings
  - user-roles - break users into roles including seed users
  - models - Collection Models using astronomy
  - email - adding ability to send emails
