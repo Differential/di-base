@@ -23,15 +23,21 @@ Template.items.helpers({
 Template.items.events({
   'click [data-action=addItem]': function (event, instance) {
     event.preventDefault();
-    var item = {
+
+    var item = new Item();
+    
+    item.set ({
       name: Fake.sentence(5),
       rating: _.random(1,5)
-    }
-    Meteor.call('addItem', item);
+    });
+
+    item.save();
+
   },
 
   'click [data-action=deleteItem]': function (event, instance) {
     event.preventDefault();
-    Meteor.call('deleteItem', this._id);
+    var item = Items.findOne({_id: this._id});
+    item.remove();
   }
 });

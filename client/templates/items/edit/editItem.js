@@ -25,12 +25,15 @@ Template.editItem.events({
     event.preventDefault();
 
     var itemId = Router.current().params.id
+    var item = Items.findOne({_id: itemId});
 
-    var itemFields = {
+    item.set({
       name: $('[name=name]').val(),
       rating: $('[name=rating]').val()
-    }
-    Meteor.call('editItem', itemId, itemFields);
+    });
+
+    item.save();
+
     Router.go('/items');
   }
 });

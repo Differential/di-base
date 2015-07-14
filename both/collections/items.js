@@ -1,5 +1,16 @@
 Items = new Mongo.Collection('items');
 
+// Create Astronomy Schema
+Item = Astronomy.createClass({
+  name: 'Item',
+  collection: Items,
+  fields: {
+    name: 'string',
+    rating: 'number'
+  },
+  behaviors: ['timestamp']
+});
+
 if (Meteor.isServer) {
   // Generate some dummy data
   Meteor.startup(function() {
@@ -18,25 +29,24 @@ if (Meteor.isServer) {
   // Publications for items
   Meteor.publish('items', function(limit) {
     return Items.find({}, {limit: limit});
-  })
+  });
 
   Meteor.publish('singleItem', function(id) {
     return Items.find({_id: id});
-  })
-
-
-  // Methods for CRUD operations
-  Meteor.methods({
-    addItem: function(item) {
-      Items.insert(item);
-    },
-
-    editItem: function(itemId, itemFields) {
-      Items.update(itemId, {$set: itemFields})
-    },
-
-    deleteItem: function(itemId) {
-      Items.remove(itemId);
-    }
   });
+
+  // Allow and Deny rules
+  Items.allow({
+    insert: function (userId, doc) {
+      return true;
+    },
+
+    update: function (userId, doc) {
+      return true;
+    },
+
+    remove: function (userId, doc) {
+      return true;
+    }
+  })
 }
