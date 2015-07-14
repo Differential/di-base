@@ -11,10 +11,10 @@ A starting point for simple Differential Meteor projects with best in class exam
 
 ### Available branches
  - settings (https://github.com/cfly15/di-base/tree/settings) - show how to use settings.json files and deploy with an npm script
+ - models (https://github.com/cfly15/di-base/tree/models) - Collection Models using astronomy
 
 ### TODOs branches (with add-ons)
  - user-roles - break users into roles including seed users
- - models - Collection Models using astronomy
  - email - adding ability to send emails
  - user-profile - Add in a User Profile page for editing
  - external-api - Example of using an external API (like contentful)
