@@ -10,3 +10,7 @@ Using di-base with astronomy (https://github.com/jagi/meteor-astronomy)
  - `meteor add jaqi:astronomy`
 
 ### Files changed
+ - both/collections/items.js
+ - client/templates/items/add/addItem.js
+ - client/templates/items/edit/editItem.js
+ - client/templates/items/items.js
