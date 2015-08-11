@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<head>
+	<script>
+		function subst() {
+			var vars = {};
+			var x = document.location.search.substring(1).split('&');
+			for (var i in x) {
+				var z = x[i].split('=', 2);
+				vars[z[0]] = unescape(z[1]);
+			}
+			var x = ['frompage', 'topage', 'page', 'webpage', 'section', 'subsection', 'subsubsection'];
+			for (var i in x) {
+				var y = document.getElementsByClassName(x[i]);
+				for (var j = 0; j < y.length; ++j) y[j].textContent = vars[x[i]];
+
+			}
+		}
+	</script>
+	<style>
+	div{
+		padding-top: 20px;
+		padding-bottom: 5px;
+		padding-left: 25px;
+		color: white;
+	}
+	</style>
+</head>
+
+<body style="display:inline; margin:0;" id="FakeHeaders" onload="subst()">
+	<div>
+		<img src="di-mobile-icon.png" style="width: 30px; height: 30px;">
+	</div>
+</body>
+
+</html>

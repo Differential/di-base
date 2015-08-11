@@ -71,5 +71,5 @@ useraccounts:bootstrap@1.11.1
 useraccounts:core@1.11.1
 webapp@1.2.0
 webapp-hashing@1.0.3
-wkhtmltopdf@0.0.2
+wkhtmltopdf-installer@0.0.1
 zimme:iron-router-active@1.0.4

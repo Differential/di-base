@@ -1,25 +1,27 @@
 # Di-Base
 
-A starting point for simple Differential Meteor projects with best in class examples for functionality.
+### Pdf-Export Branch
+Using di-base with wkhtmltopdf-installer (https://github.com/pofider/node-wkhtmltopdf-installer) and wkhtmltopdf (https://github.com/devongovett/node-wkhtmltopdf)
 
-### Includes
- - User Accounts
- - Template level subscriptions
- - An example of CRUD operations
- - Minimal file structure
- - Routing
+### Why use a pdf
+ - Ability to control the styling a pdf with a header and a footer
 
-### Available branches
- - settings (https://github.com/cfly15/di-base/tree/settings) - show how to use settings.json files and deploy with an npm script
- - models (https://github.com/cfly15/di-base/tree/models) - Collection Models using astronomy
+### Added packages
 
-### TODOs branches (with add-ons)
- - user-roles - break users into roles including seed users
- - email - adding ability to send emails
- - user-profile - Add in a User Profile page for editing
- - external-api - Example of using an external API (like contentful)
- - image-upload - image upload to S3 and storing in db
- - csv - csv import/export
- - pdf - pdf export
- - ios - best in class ios app setup and documentation (from meteor to appstore)
- - pro - a branch to rule them all (includes all from above)
+####wkthmltopdf-installer
+ - `meteor create wkhtmltopdf-installer`
+ - `Npm.depends({'wkhtmltopdf-installer': '0.1.9'});`
+
+####wkthmltopdf
+- `meteor create Pdf_exporter`
+- `Npm.depends({'wkhtmltopdf': '0.1.5'});`
+- Then remove from packages and then pull out the wkhtmltopdf folder from node-modules folder and put in server folder to allow it to pass through modulus
+- .npm folder gets removed in modulus and packages get remove through Modulus's demeteorizer
+
+
+### Files changed
+ - both/router/routes.js
+ - packages/wkhtmltopdf-installer
+ - server/Pdf_exporter
+ - public/html/header.html
+ - public/html/footer.html

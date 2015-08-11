@@ -1,5 +1,5 @@
 var spawn = Npm.require('child_process').spawn;
-var slang = Npm.require(process.cwd()+'/app/server/myModule/wkhtmltopdf/dependencies/slang/slang.min.js');
+var slang = Npm.require(process.cwd()+'/app/server/Pdf_exporter/wkhtmltopdf/dependencies/slang/slang.min.js');
 
 function quote(val) {
   // escape and quote the value if it is a string and this isn't windows

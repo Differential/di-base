@@ -1,6 +1,6 @@
 Package.describe({
-  name: 'wkhtmltopdf',
-  version: '0.0.2',
+  name: 'wkhtmltopdf-installer',
+  version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
   // URL to the Git repository containing the source code for this package.

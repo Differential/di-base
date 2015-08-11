@@ -40,14 +40,12 @@ Router.route('/download/:file', function() {
     self.response.writeHead(200, headers);
 
       //dev: http://localhost:3000/html/header.html
-      //production: http://eb.differential.com/html/header.html
 
       //dev: http://localhost:3000/html/footer.html
-      //production: http://eb.differential.com/html/footer.html
 
       var q = wkhtmltopdf(data, {
-        // headerHtml: 'http://eb.differential.com/html/header.html',
-        // footerHtml: 'http://eb.differential.com/html/footer.html',
+        headerHtml: 'http://localhost:3000/html/header.html',
+        footerHtml: 'http://localhost:3000/html/footer.html',
         // toc: true,
         loadErrorHandling: 'ignore',
         printMediaType: true,

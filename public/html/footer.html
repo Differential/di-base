@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<head>
+	<script>
+		function subst() {
+			var vars = {};
+			var x = document.location.search.substring(1).split('&');
+			for (var i in x) {
+				var z = x[i].split('=', 2);
+				vars[z[0]] = unescape(z[1]);
+			}
+			var x = ['frompage', 'topage', 'page', 'webpage', 'section', 'subsection', 'subsubsection'];
+			for (var i in x) {
+				var y = document.getElementsByClassName(x[i]);
+				for (var j = 0; j < y.length; ++j) y[j].textContent = vars[x[i]];
+
+			}
+		}
+	</script>
+	<style>
+	@font-face {
+		font-family: BebasNeueBold;
+		src: url(http://eb.differential.com/fonts/bebasNeue/bebasneue-bold.ttf);
+	}
+	div{
+		background:#FFFFFF;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    padding-left: 101px;
+		color: #1D2937;
+	}
+
+	hr {
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 10px;
+		margin-left: 138px;
+    border-style: inset;
+    border-width: 1px;
+}
+	</style>
+</head>
+
+	<body style="margin:0;" id="FakeHeaders" onload="subst()">
+		<footer class="footer-distributed">
+			<div class="footer-center">
+        <div>
+					<hr width="8%" noshade="nosahde" color="#DE6826">
+					<span style="font-family: 'Roboto', sans-serif; size: 3">120 E 8th St. Cincinnati, OH &bull; </span>
+					<span style="font-family: 'BebasNeueBold', sans-serif; size: 3; color:#4E515D;">DIFFERENTIAL.COM</span>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
