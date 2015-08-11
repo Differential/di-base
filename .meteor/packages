@@ -15,5 +15,7 @@ useraccounts:bootstrap
 alanning:roles
 momentjs:moment
 reactive-var
-
 anti:fake
+
+#Local Packages
+wkhtmltopdf-installer
