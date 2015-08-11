@@ -10,8 +10,9 @@ A starting point for simple Differential Meteor projects with best in class exam
  - Routing
 
 ### Available branches
- - settings (https://github.com/cfly15/di-base/tree/settings) - show how to use settings.json files and deploy with an npm script
- - models (https://github.com/cfly15/di-base/tree/models) - Collection Models using astronomy
+ - settings (https://github.com/Differential/di-base/tree/settings) - show how to use settings.json files and deploy with an npm script
+ - models (https://github.com/Differential/di-base/tree/models) - Collection Models using astronomy
+ - Pdf (https://github.com/Differential/di-base/tree/pdf_export) - Pdf export using wkhtmltopdf
 
 ### TODOs branches (with add-ons)
  - user-roles - break users into roles including seed users
@@ -20,6 +21,5 @@ A starting point for simple Differential Meteor projects with best in class exam
  - external-api - Example of using an external API (like contentful)
  - image-upload - image upload to S3 and storing in db
  - csv - csv import/export
- - pdf - pdf export
  - ios - best in class ios app setup and documentation (from meteor to appstore)
  - pro - a branch to rule them all (includes all from above)
